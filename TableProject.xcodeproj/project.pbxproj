@@ -13,6 +13,9 @@
 		6006B8B51F6E79F800B39E1C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6006B8B41F6E79F800B39E1C /* Assets.xcassets */; };
 		6006B8B81F6E79F800B39E1C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6006B8B61F6E79F800B39E1C /* LaunchScreen.storyboard */; };
 		601D3A391F6E9812006062F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 601D3A381F6E9812006062F9 /* Main.storyboard */; };
+		601F08451F7841D8008FD3C5 /* SecondTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 601F08441F7841D8008FD3C5 /* SecondTableViewCell.m */; };
+		601F08481F7841F3008FD3C5 /* ThirdTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 601F08471F7841F3008FD3C5 /* ThirdTableViewCell.m */; };
+		601F084B1F78421D008FD3C5 /* FourthTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 601F084A1F78421D008FD3C5 /* FourthTableViewCell.m */; };
 		60B719C11F72EC26003B1E51 /* FirstTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 60B719C01F72EC26003B1E51 /* FirstTableViewCell.m */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +30,12 @@
 		6006B8B71F6E79F800B39E1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6006B8B91F6E79F800B39E1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		601D3A381F6E9812006062F9 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		601F08431F7841D8008FD3C5 /* SecondTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondTableViewCell.h; sourceTree = "<group>"; };
+		601F08441F7841D8008FD3C5 /* SecondTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondTableViewCell.m; sourceTree = "<group>"; };
+		601F08461F7841F3008FD3C5 /* ThirdTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdTableViewCell.h; sourceTree = "<group>"; };
+		601F08471F7841F3008FD3C5 /* ThirdTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdTableViewCell.m; sourceTree = "<group>"; };
+		601F08491F78421D008FD3C5 /* FourthTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FourthTableViewCell.h; sourceTree = "<group>"; };
+		601F084A1F78421D008FD3C5 /* FourthTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FourthTableViewCell.m; sourceTree = "<group>"; };
 		60B719BF1F72EC26003B1E51 /* FirstTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstTableViewCell.h; sourceTree = "<group>"; };
 		60B719C01F72EC26003B1E51 /* FirstTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -72,6 +81,12 @@
 				6006B8A81F6E79F800B39E1C /* Supporting Files */,
 				60B719BF1F72EC26003B1E51 /* FirstTableViewCell.h */,
 				60B719C01F72EC26003B1E51 /* FirstTableViewCell.m */,
+				601F08431F7841D8008FD3C5 /* SecondTableViewCell.h */,
+				601F08441F7841D8008FD3C5 /* SecondTableViewCell.m */,
+				601F08461F7841F3008FD3C5 /* ThirdTableViewCell.h */,
+				601F08471F7841F3008FD3C5 /* ThirdTableViewCell.m */,
+				601F08491F78421D008FD3C5 /* FourthTableViewCell.h */,
+				601F084A1F78421D008FD3C5 /* FourthTableViewCell.m */,
 			);
 			path = TableProject;
 			sourceTree = "<group>";
@@ -156,9 +171,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				6006B8B01F6E79F800B39E1C /* ViewController.m in Sources */,
+				601F08451F7841D8008FD3C5 /* SecondTableViewCell.m in Sources */,
 				6006B8AD1F6E79F800B39E1C /* AppDelegate.m in Sources */,
+				601F084B1F78421D008FD3C5 /* FourthTableViewCell.m in Sources */,
 				60B719C11F72EC26003B1E51 /* FirstTableViewCell.m in Sources */,
 				6006B8AA1F6E79F800B39E1C /* main.m in Sources */,
+				601F08481F7841F3008FD3C5 /* ThirdTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

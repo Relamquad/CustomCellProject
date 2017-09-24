@@ -8,6 +8,10 @@
 
 #import "ViewController.h"
 #import "FirstTableViewCell.h"
+#import "SecondTableViewCell.h"
+#import "ThirdTableViewCell.h"
+#import "FourthTableViewCell.h"
+
 
 
 
@@ -36,12 +40,12 @@
                      [UIColor cyanColor],
                      [UIColor darkGrayColor],
                      [UIColor magentaColor],nil];
-    self.StringArr1 =[[NSArray alloc] initWithObjects:@"Str11",@"Str12",@"Str13",@"Str14",@"Str15",nil];
+    self.StringArr1 =[[NSArray alloc] initWithObjects:@"MyCustomeCell",@"MyCustomCellTwo",nil];
     self.StringArr2 =[[NSArray alloc] initWithObjects:@"Str21",@"Str22",@"Str23",@"Str24",@"Str25",@"Str26",@"Str27",nil];
     self.StringArr3 =[[NSArray alloc] initWithObjects:@"Str31",@"Str32",@"Str33",@"Str34",@"Str35",@"Str36",nil];
-    self.FirstAmount = self.StringArr1.count;
-    self.SecondAmount = self.StringArr2.count;
-    self.ThirdAmount = self.StringArr3.count;
+    self.FirstAmount = 2;
+    self.SecondAmount = 3;
+    self.ThirdAmount = 4;
     // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -68,15 +72,50 @@
     }
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *cellIdentifier = @"MyCustomeCell";
-    FirstTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-    cell.string = @"Test";
-    
-    
-    
-    return cell;
+    static NSString *cellIdentifierTwo = @"MyCustomCellTwo";
+    static NSString *cellIdentifierThree = @"MyCustomCellThree";
+    static NSString *cellIdentifierFour = @"MyCustomCellFour";
+
+//    FirstTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    if (indexPath.section == 0){
+        if (indexPath.row == 0) {
+            ThirdTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifierThree];
+            return cell;
+        } else {
+            FirstTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+            return cell;
+        }
+    }
+    else if (indexPath.section == 1) {
+        if (indexPath.row ==0){
+            FourthTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifierFour];
+            return cell;
+        } else if (indexPath.row == 1) {
+            FirstTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+            return cell;
+        } else  {
+            ThirdTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifierThree];
+            return cell;
+
+        }
+    }
+     else{
+         if (indexPath.row ==0){
+             FourthTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifierFour];
+             return cell;
+         } else if (indexPath.row == 1) {
+             FirstTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+             return cell;
+         } else if (indexPath.row == 2) {
+             ThirdTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifierThree];
+             return cell;
+         } else {
+             SecondTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifierTwo];
+             return cell;
+         }}}
+
     
 //    UITableViewCell  *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
 //    
@@ -108,7 +147,6 @@
 //    }
 //    
 //    return cell;
-}
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
     if (section == 0) {
